@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700');
+
 #navbarSupportedContent {
     justify-content: end;
 }
@@ -13,6 +15,7 @@
     right: 0;
     z-index: 1030;
     background-color: rgba(0, 0, 0, 0.83);
+    padding: 9px;
 }
 
 .navbar-toggler {
@@ -28,10 +31,28 @@
     text-transform: uppercase;
 }
 
+.dropdown-menu {
+    padding: 10px;
+}
+
 .dropdown, .dropleft, .dropright, .dropup {
     position: relative;
     display: inline-block;
 } 
+
+.dropdown-menu:before {
+    position: absolute;
+    top: -8px;
+    left: 22px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 9px 8px;
+    border-color: transparent transparent #fff;
+    box-sizing: border-box;
+}
 
 .dropdown-menu a:hover {background-color: #26ae61;}
 .dropdown:hover .dropdown-menu {display: block;}
@@ -116,6 +137,7 @@ h4,
 h5 {
     font-family: Comic Sans MS, sans-serif;
     color: #191c1e;
+    font-weight: 700;
 }
 
 .hero-area {
@@ -130,6 +152,11 @@ h5 {
 
 .hero-area .intro-img {
     padding: 35px 0 0;
+}
+
+.img-cntr{
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -376,6 +403,7 @@ a {
     margin-right: -6px;
 }
 
+
 /* owl carousal */
 .owl-nav button {
     position: absolute;
@@ -431,6 +459,9 @@ span {
 .owl-nav button:focus {
     outline: none;
 }
+
+
+/* footer section */
 
 footer .footer-content {
     background-color: #24324a;
@@ -582,6 +613,9 @@ ul li {
     text-align: center;
 }
 
+
+/* media query */
+
 @media only screen and (max-width: 767px) {
 .job-search-form .button {
     width: 100%;
@@ -597,17 +631,24 @@ ul li {
 
 @media only screen and (max-width: 767px){
     .brand {
-        display: none;
+    display: none;
 }}
 
 @media only screen and (max-width: 767px){
     #navbarSupportedContent {
-        overflow: auto;
-        max-height: 350px;
+    overflow: auto;
+    max-height: 350px;
+}}
+
+@media only screen and (max-width: 767px){
+.container {
+    max-width: 720px;
 }}
 
 
+
 /* colored scrollbar */
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
